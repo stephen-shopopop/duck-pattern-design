@@ -12,7 +12,7 @@ info: |
 author: stephen deletang
 keywords: pattern design
 presenter: true
-browserExporter: dev
+browserExporter: build
 download: true,
 exportFilename: ducker-pattern-design-exported
 export:
@@ -43,7 +43,7 @@ transition: slide-left
 mdc: true
 ---
 
-# Welcome to duck pattern design
+# Duck design patterns
 
 Presentation slides for developers
 
@@ -70,6 +70,34 @@ layout: center
 
 ## Définitions
 
+Schéma formant une solution reconnue comme fiable et robuste (aka. bonne pratique) à un problème connu ou récurrent
+
 ---
-src: ./pages/imported-slides.md
+
+# Les design patterns
+
+A partir de cette définition, on peut donc dire que les design patterns (patrons de conception en français) naissent via l’expérience. En effet, être confronté plusieurs fois à un même problème permet d’améliorer et d’affiner à chaque fois la solution qu’on y apporte. Au bout d’un moment, en fédérant les travaux d’autres personnes ayant été confrontées au même problème, on va finir par aboutir à une solution qui s’avère être la mieux adaptée pour ce problème précis. Il suffit ensuite d’en retirer la moelle pour obtenir un modèle réutilisable permettant de résoudre le problème de manière efficace et performante.
+
+<br>
+
+Un design pattern est donc une capitalisation du travail. On peut y voir 3 points positifs:
+
+- Évite de réinventer la roue !
+- Gain de temps
+- Permet de s’assurer que l’on applique une “bonne” solution (fiable, robuste et éprouvée)
+
+---
+
+# Design Pattern = Nom + Problème + Solution + Conséquence
+
+Historiquement, les design patterns proviennent des travaux de Christopher Alexander (architecte) dans les années 70 et ont été formalisés dans le livre “Design Patterns – Elements of Reusable Object-Oriented Software” du Gang Of Four en 1995 (ou GoF : groupe de 4 informaticiens, Erich Gamma, Richard Helm, Ralph Johnson et John Vlissides, auteurs de nombreux ouvrages en programmation orientée objet). Les patrons de conception ont été divisés par le GoF en 3 catégories que nous allons parcourir ensemble.
+
+Dans cette présentation nous décrirons ces différents pattern avec le language typescript.
+
+---
+src: ./pages/solid-principe.md
+---
+
+---
+src: ./pages/creational-patterns.md
 ---
