@@ -55,7 +55,7 @@ Presentation slides for developers
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
     <carbon:edit />
   </button>
-  <a href="https://github.com/stephen-shopopop/duck-pattern design" target="_blank" class="slidev-icon-btn">
+  <a href="https://github.com/stephen-shopopop/duck-pattern-design" target="_blank" class="slidev-icon-btn">
     <carbon:logo-github />
   </a>
 </div>
