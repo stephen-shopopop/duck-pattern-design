@@ -97,7 +97,7 @@ class Receiver {
 }
 class LightOnCommand implements Command {  
   constructor(private light: Receiver) {/** */ }
-  public execute() { this.light.turnOn(); }
+  execute() { this.light.turnOn(); }
 }
 class LightOffCommand implements Command {  
   constructor(private light: Receiver) { /** */ }
@@ -105,7 +105,7 @@ class LightOffCommand implements Command {
 }
 class Invoker {  
   constructor(private command: Command) { /** */}
-  public press() { this.command.execute(); }
+  press() { this.command.execute(); }
 }
 
 const light = new Receiver();
@@ -217,7 +217,7 @@ interface Memento {
 }
 class ConcreteMemento implements Memento {
   constructor(private state: string) { /** */ }
-  public getState(): string { return this.state; }
+  getState(): string { return this.state; }
 }
 class Originator {
   constructor(private state: string) { console.log(`Originator: My initial state is: ${state}`); }

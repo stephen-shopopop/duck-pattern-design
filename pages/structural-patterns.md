@@ -4,7 +4,7 @@ layout: center
 
 # Design patterns - Structural
 
-Après les patterns creationals (que vous pouvez retrouver ici), nous allons aborder les structural patterns ou patrons de structure. Il en existe 7 et ils permettent de définir comment organiser nos objets.
+Après les patterns creationals, nous allons aborder les structural patterns ou patrons de structure. Il en existe 7 et ils permettent de définir comment organiser nos objets.
 
 ---
 layout: center
@@ -37,31 +37,31 @@ Toute la complexité d’adaptation est cachée. En plus de s’adapter à la ci
 ```ts
 class Adaptee {
   fetchData() {
-      return {
-          data: { name: 'john', age: 25, social: { email: 'john@doe.com' } },
-      } as const;
+    return {
+      data: { name: 'john', age: 25, social: { email: 'john@doe.com' } },
+    } as const;
   }
 }
 
 interface Target {
-  name: string;
+  email: string;
 }
 
 class Adapter implements Target {
   constructor(private adaptee: Adaptee) {/** */}
 
-  get name(): string {
-      return this.adaptee.fetchData().data.name;
+  get email(): string {
+    return this.adaptee.fetchData().data.social.email;
   }
 }
 
 function clientCode(data: Target) {
-  console.log(`Name: ${data.name}`);
+  console.log(`Email: ${data.email}`);
 }
 
 const adaptee = new Adaptee();
 const adapter = new Adapter(adaptee);
-clientCode(adapter); // Name: john
+clientCode(adapter); // Email: john@doe.com'
 ```
 
 ---
@@ -90,14 +90,14 @@ abstract class Backend {
 }
 
 class AndroidUI extends UI {
-  public render() {
+  render() {
     const data = this.backend.getData();
     console.log("AndroidUI: Rendering data from the backend ->", data);
   }
 }
 
 class MobileBackend implements Backend {
-  public getData() {
+  getData() {
     return "MobileBackend: Data from the backend";
   }
 }

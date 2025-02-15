@@ -109,3 +109,7 @@ src: ./pages/structural-patterns.md
 ---
 src: ./pages/behavior-patterns.md
 ---
+
+---
+layout: end
+---
