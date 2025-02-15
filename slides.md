@@ -95,6 +95,17 @@ Historiquement, les design patterns proviennent des travaux de Christopher Alexa
 Dans cette présentation nous décrirons ces différents pattern avec le language typescript.
 
 ---
+
+# Pré-requis
+
+TypeScript offre un support entier pour le mot-clé class introduit avec ES2015.
+
+Tout comme les autres fonctionnalités JavaScript, TypeScript ajoute les annotations de type et autres éléments de syntaxe pour vous permettre d’exprimer les relations entre les classes et les autres types [typescript les classes](https://www.typescriptlang.org/fr/docs/handbook/2/classes.html).
+
+Livre [TypeScript Notions fondamentales (2e édition)](https://www.editions-eni.fr/livre/typescript-notions-fondamentales-2e-edition-9782409041266)
+
+
+---
 src: ./pages/solid-principe.md
 ---
 
